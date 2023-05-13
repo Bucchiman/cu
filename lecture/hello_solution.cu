@@ -3,7 +3,7 @@
  * Author:       8ucchiman
  * CreatedDate:  2023-05-10 14:22:55
  * LastModified: 2023-02-26 13:30:39 +0900
- * Reference:    8ucchiman.jp
+ * Reference:    https://github.com/olcf/cuda-training-series.git
  * Description:  ---
  */
 
