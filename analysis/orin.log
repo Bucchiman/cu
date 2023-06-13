@@ -1,0 +1,1116 @@
+Self-Driving-ish Computer Vision System
+TRT
+
+
+[06/13/2023-18:21:29] [I] [TRT] Total Activation Memory: 1445729280
+[06/13/2023-18:21:29] [I] [TRT] Detected 1 inputs and 6 output network tensors.
+[06/13/2023-18:21:30] [I] [TRT] Total Host Persistent Memory: 417312
+[06/13/2023-18:21:30] [I] [TRT] Total Device Persistent Memory: 0
+[06/13/2023-18:21:30] [I] [TRT] Total Scratch Memory: 0
+[06/13/2023-18:21:30] [I] [TRT] [MemUsageStats] Peak memory usage of TRT CPU/GPU memory allocators: CPU 226 MiB, GPU 913 MiB
+[06/13/2023-18:21:30] [I] [TRT] [BlockAssignment] Started assigning block shifts. This will take 204 steps to complete.
+[06/13/2023-18:21:30] [I] [TRT] [BlockAssignment] Algorithm ShiftNTopDown took 33.5262ms to assign 15 blocks to 204 nodes requiring 53330432 bytes.
+[06/13/2023-18:21:30] [I] [TRT] Total Activation Memory: 53330432
+[06/13/2023-18:21:30] [W] [TRT] TensorRT encountered issues when converting weights between types and that could affect accuracy.
+[06/13/2023-18:21:30] [W] [TRT] If this is not the desired behavior, please modify the weights or retrain with regularization to adjust the magnitude of the weights.
+[06/13/2023-18:21:30] [W] [TRT] Check verbose logs for the list of affected weights.
+[06/13/2023-18:21:30] [W] [TRT] - 219 weights are affected by this issue: Detected subnormal FP16 values.
+[06/13/2023-18:21:30] [W] [TRT] - 139 weights are affected by this issue: Detected values less than smallest positive FP16 subnormal value and converted them to the FP16 minimum subnormalized value.
+[06/13/2023-18:21:30] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in building engine: CPU +141, GPU +256, now: CPU 142, GPU 384 (MiB)
+[06/13/2023-18:21:30] [I] [TRT] Loaded engine size: 141 MiB
+[06/13/2023-18:21:30] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +140, now: CPU 1, GPU 268 (MiB)
+[06/13/2023-18:21:31] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +1, GPU +51, now: CPU 2, GPU 319 (MiB)
+[InferenceHelperTensorRt][344] num_of_in_out = 7
+[InferenceHelperTensorRt][347] tensor[0]->name: input.1
+[InferenceHelperTensorRt][348]   is input = 1
+[InferenceHelperTensorRt][352]   dims.d[0] = 1
+[InferenceHelperTensorRt][352]   dims.d[1] = 3
+[InferenceHelperTensorRt][352]   dims.d[2] = 256
+[InferenceHelperTensorRt][352]   dims.d[3] = 512
+[InferenceHelperTensorRt][356]   data_type = 0
+[InferenceHelperTensorRt][347] tensor[1]->name: 2489
+[InferenceHelperTensorRt][348]   is input = 0
+[InferenceHelperTensorRt][352]   dims.d[0] = 1
+[InferenceHelperTensorRt][352]   dims.d[1] = 1
+[InferenceHelperTensorRt][352]   dims.d[2] = 16
+[InferenceHelperTensorRt][352]   dims.d[3] = 32
+[InferenceHelperTensorRt][356]   data_type = 0
+[InferenceHelperTensorRt][347] tensor[2]->name: 2491
+[InferenceHelperTensorRt][348]   is input = 0
+[InferenceHelperTensorRt][352]   dims.d[0] = 1
+[InferenceHelperTensorRt][352]   dims.d[1] = 1
+[InferenceHelperTensorRt][352]   dims.d[2] = 32
+[InferenceHelperTensorRt][352]   dims.d[3] = 64
+[InferenceHelperTensorRt][356]   data_type = 0
+[InferenceHelperTensorRt][347] tensor[3]->name: 2493
+[InferenceHelperTensorRt][348]   is input = 0
+[InferenceHelperTensorRt][352]   dims.d[0] = 1
+[InferenceHelperTensorRt][352]   dims.d[1] = 1
+[InferenceHelperTensorRt][352]   dims.d[2] = 64
+[InferenceHelperTensorRt][352]   dims.d[3] = 128
+[InferenceHelperTensorRt][356]   data_type = 0
+[InferenceHelperTensorRt][347] tensor[4]->name: 2495
+[InferenceHelperTensorRt][348]   is input = 0
+[InferenceHelperTensorRt][352]   dims.d[0] = 1
+[InferenceHelperTensorRt][352]   dims.d[1] = 1
+[InferenceHelperTensorRt][352]   dims.d[2] = 128
+[InferenceHelperTensorRt][352]   dims.d[3] = 256
+[InferenceHelperTensorRt][356]   data_type = 0
+[InferenceHelperTensorRt][347] tensor[5]->name: 2497
+[InferenceHelperTensorRt][348]   is input = 0
+[InferenceHelperTensorRt][352]   dims.d[0] = 1
+[InferenceHelperTensorRt][352]   dims.d[1] = 1
+[InferenceHelperTensorRt][352]   dims.d[2] = 256
+[InferenceHelperTensorRt][352]   dims.d[3] = 512
+[InferenceHelperTensorRt][356]   data_type = 0
+[InferenceHelperTensorRt][347] tensor[6]->name: 2499
+[InferenceHelperTensorRt][348]   is input = 0
+[InferenceHelperTensorRt][352]   dims.d[0] = 1
+[InferenceHelperTensorRt][352]   dims.d[1] = 1
+[InferenceHelperTensorRt][352]   dims.d[2] = 256
+[InferenceHelperTensorRt][352]   dims.d[3] = 512
+[InferenceHelperTensorRt][356]   data_type = 0
+[06/13/2023-18:21:31] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:31] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:31] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:31] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:31] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:31] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:31] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:31] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 141.218 [msec]
+  Capture:              22.865 [msec]
+  Image processing:    113.364 [msec]
+    Pre processing:     11.376 [msec]
+    Inference:          79.538 [msec]
+    Post processing:     3.643 [msec]
+=== Finished 0 frame ===
+
+[06/13/2023-18:21:31] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:31] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:31] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:31] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:31] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:31] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:31] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:31] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 130.127 [msec]
+  Capture:               3.141 [msec]
+  Image processing:    113.492 [msec]
+    Pre processing:     11.842 [msec]
+    Inference:          77.052 [msec]
+    Post processing:     2.264 [msec]
+=== Finished 1 frame ===
+
+[06/13/2023-18:21:31] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:31] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:31] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:31] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:31] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:31] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:31] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:31] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 125.212 [msec]
+  Capture:               3.348 [msec]
+  Image processing:    111.299 [msec]
+    Pre processing:     10.687 [msec]
+    Inference:          75.753 [msec]
+    Post processing:     2.096 [msec]
+=== Finished 2 frame ===
+
+[06/13/2023-18:21:31] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:31] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:31] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:31] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:31] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:31] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:31] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:31] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 117.713 [msec]
+  Capture:               3.284 [msec]
+  Image processing:    107.683 [msec]
+    Pre processing:     11.949 [msec]
+    Inference:          75.943 [msec]
+    Post processing:     2.237 [msec]
+=== Finished 3 frame ===
+
+[06/13/2023-18:21:31] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:31] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:31] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:31] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:31] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:31] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 123.826 [msec]
+  Capture:               3.174 [msec]
+  Image processing:    110.179 [msec]
+    Pre processing:     14.168 [msec]
+    Inference:          75.944 [msec]
+    Post processing:     2.394 [msec]
+=== Finished 4 frame ===
+
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 121.083 [msec]
+  Capture:               3.271 [msec]
+  Image processing:    110.813 [msec]
+    Pre processing:     14.979 [msec]
+    Inference:          75.897 [msec]
+    Post processing:     4.078 [msec]
+=== Finished 5 frame ===
+
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 104.876 [msec]
+  Capture:               3.130 [msec]
+  Image processing:     95.879 [msec]
+    Pre processing:      9.237 [msec]
+    Inference:          76.006 [msec]
+    Post processing:     2.230 [msec]
+=== Finished 6 frame ===
+
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 115.353 [msec]
+  Capture:               3.200 [msec]
+  Image processing:    108.619 [msec]
+    Pre processing:     13.599 [msec]
+    Inference:          76.939 [msec]
+    Post processing:     2.301 [msec]
+=== Finished 7 frame ===
+
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 132.516 [msec]
+  Capture:               3.261 [msec]
+  Image processing:    109.914 [msec]
+    Pre processing:     13.560 [msec]
+    Inference:          76.579 [msec]
+    Post processing:     2.211 [msec]
+=== Finished 8 frame ===
+
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 107.592 [msec]
+  Capture:               3.716 [msec]
+  Image processing:     97.278 [msec]
+    Pre processing:      9.814 [msec]
+    Inference:          76.908 [msec]
+    Post processing:     1.766 [msec]
+=== Finished 9 frame ===
+
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 106.077 [msec]
+  Capture:               2.910 [msec]
+  Image processing:     96.989 [msec]
+    Pre processing:      9.481 [msec]
+    Inference:          76.749 [msec]
+    Post processing:     2.160 [msec]
+=== Finished 10 frame ===
+
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 107.946 [msec]
+  Capture:               2.866 [msec]
+  Image processing:     97.782 [msec]
+    Pre processing:     10.803 [msec]
+    Inference:          76.158 [msec]
+    Post processing:     1.968 [msec]
+=== Finished 11 frame ===
+
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 123.314 [msec]
+  Capture:               3.421 [msec]
+  Image processing:    112.433 [msec]
+    Pre processing:     11.352 [msec]
+    Inference:          76.612 [msec]
+    Post processing:     2.656 [msec]
+=== Finished 12 frame ===
+
+[06/13/2023-18:21:32] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:32] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 109.756 [msec]
+  Capture:               3.737 [msec]
+  Image processing:     98.681 [msec]
+    Pre processing:     12.147 [msec]
+    Inference:          76.027 [msec]
+    Post processing:     2.119 [msec]
+=== Finished 13 frame ===
+
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 112.631 [msec]
+  Capture:               3.346 [msec]
+  Image processing:    102.289 [msec]
+    Pre processing:     14.314 [msec]
+    Inference:          75.971 [msec]
+    Post processing:     2.300 [msec]
+=== Finished 14 frame ===
+
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 139.895 [msec]
+  Capture:               3.451 [msec]
+  Image processing:    129.557 [msec]
+    Pre processing:     13.871 [msec]
+    Inference:          76.650 [msec]
+    Post processing:     2.431 [msec]
+=== Finished 15 frame ===
+
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 112.357 [msec]
+  Capture:               3.184 [msec]
+  Image processing:    102.300 [msec]
+    Pre processing:     10.390 [msec]
+    Inference:          76.561 [msec]
+    Post processing:     2.812 [msec]
+=== Finished 16 frame ===
+
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 119.867 [msec]
+  Capture:               3.212 [msec]
+  Image processing:    109.791 [msec]
+    Pre processing:     13.794 [msec]
+    Inference:          76.314 [msec]
+    Post processing:     3.576 [msec]
+=== Finished 17 frame ===
+
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 122.158 [msec]
+  Capture:               2.967 [msec]
+  Image processing:    112.969 [msec]
+    Pre processing:     10.000 [msec]
+    Inference:          75.970 [msec]
+    Post processing:     2.009 [msec]
+=== Finished 18 frame ===
+
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 122.797 [msec]
+  Capture:               2.946 [msec]
+  Image processing:    113.319 [msec]
+    Pre processing:     10.082 [msec]
+    Inference:          76.314 [msec]
+    Post processing:     1.859 [msec]
+=== Finished 19 frame ===
+
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 124.167 [msec]
+  Capture:               2.868 [msec]
+  Image processing:    114.484 [msec]
+    Pre processing:     10.200 [msec]
+    Inference:          76.510 [msec]
+    Post processing:     1.944 [msec]
+=== Finished 20 frame ===
+
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:33] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:33] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 109.117 [msec]
+  Capture:               3.460 [msec]
+  Image processing:     98.241 [msec]
+    Pre processing:     10.565 [msec]
+    Inference:          76.606 [msec]
+    Post processing:     2.122 [msec]
+=== Finished 21 frame ===
+
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 131.722 [msec]
+  Capture:               3.407 [msec]
+  Image processing:    121.262 [msec]
+    Pre processing:      9.930 [msec]
+    Inference:          77.354 [msec]
+    Post processing:     2.432 [msec]
+=== Finished 22 frame ===
+
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 113.636 [msec]
+  Capture:               3.575 [msec]
+  Image processing:    102.314 [msec]
+    Pre processing:     10.269 [msec]
+    Inference:          76.543 [msec]
+    Post processing:     2.110 [msec]
+=== Finished 23 frame ===
+
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 194.790 [msec]
+  Capture:               4.160 [msec]
+  Image processing:    110.563 [msec]
+    Pre processing:     13.105 [msec]
+    Inference:          77.191 [msec]
+    Post processing:     3.706 [msec]
+=== Finished 24 frame ===
+
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 117.980 [msec]
+  Capture:               7.145 [msec]
+  Image processing:    103.468 [msec]
+    Pre processing:     13.232 [msec]
+    Inference:          77.967 [msec]
+    Post processing:     2.628 [msec]
+=== Finished 25 frame ===
+
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 135.937 [msec]
+  Capture:               3.442 [msec]
+  Image processing:    125.544 [msec]
+    Pre processing:     16.182 [msec]
+    Inference:          76.134 [msec]
+    Post processing:     2.370 [msec]
+=== Finished 26 frame ===
+
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 125.419 [msec]
+  Capture:               3.426 [msec]
+  Image processing:    114.985 [msec]
+    Pre processing:     10.542 [msec]
+    Inference:          75.801 [msec]
+    Post processing:     2.274 [msec]
+=== Finished 27 frame ===
+
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:34] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:34] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 124.356 [msec]
+  Capture:               3.351 [msec]
+  Image processing:    114.019 [msec]
+    Pre processing:     10.389 [msec]
+    Inference:          76.390 [msec]
+    Post processing:     2.189 [msec]
+=== Finished 28 frame ===
+
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 123.032 [msec]
+  Capture:               3.357 [msec]
+  Image processing:    112.220 [msec]
+    Pre processing:     10.781 [msec]
+    Inference:          76.871 [msec]
+    Post processing:     2.569 [msec]
+=== Finished 29 frame ===
+
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 135.657 [msec]
+  Capture:               3.657 [msec]
+  Image processing:    125.625 [msec]
+    Pre processing:     11.732 [msec]
+    Inference:          76.185 [msec]
+    Post processing:     2.136 [msec]
+=== Finished 30 frame ===
+
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 108.006 [msec]
+  Capture:               3.341 [msec]
+  Image processing:     98.370 [msec]
+    Pre processing:     11.007 [msec]
+    Inference:          76.406 [msec]
+    Post processing:     2.073 [msec]
+=== Finished 31 frame ===
+
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 112.527 [msec]
+  Capture:               2.834 [msec]
+  Image processing:    102.910 [msec]
+    Pre processing:     10.819 [msec]
+    Inference:          77.395 [msec]
+    Post processing:     1.962 [msec]
+=== Finished 32 frame ===
+
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 111.286 [msec]
+  Capture:               3.424 [msec]
+  Image processing:    100.881 [msec]
+    Pre processing:     14.693 [msec]
+    Inference:          75.853 [msec]
+    Post processing:     2.639 [msec]
+=== Finished 33 frame ===
+
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 115.128 [msec]
+  Capture:               3.447 [msec]
+  Image processing:    104.821 [msec]
+    Pre processing:     16.984 [msec]
+    Inference:          76.465 [msec]
+    Post processing:     2.494 [msec]
+=== Finished 34 frame ===
+
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 134.070 [msec]
+  Capture:               3.632 [msec]
+  Image processing:    123.219 [msec]
+    Pre processing:     17.275 [msec]
+    Inference:          76.307 [msec]
+    Post processing:     3.116 [msec]
+=== Finished 35 frame ===
+
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 137.807 [msec]
+  Capture:               3.400 [msec]
+  Image processing:    127.197 [msec]
+    Pre processing:      9.933 [msec]
+    Inference:          75.945 [msec]
+    Post processing:     2.091 [msec]
+=== Finished 36 frame ===
+
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:35] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:35] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 134.164 [msec]
+  Capture:               3.840 [msec]
+  Image processing:    123.052 [msec]
+    Pre processing:     11.335 [msec]
+    Inference:          76.938 [msec]
+    Post processing:     2.345 [msec]
+=== Finished 37 frame ===
+
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 139.045 [msec]
+  Capture:               3.774 [msec]
+  Image processing:    127.981 [msec]
+    Pre processing:     10.890 [msec]
+    Inference:          76.386 [msec]
+    Post processing:     2.658 [msec]
+=== Finished 38 frame ===
+
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 109.914 [msec]
+  Capture:               3.537 [msec]
+  Image processing:     98.728 [msec]
+    Pre processing:     10.301 [msec]
+    Inference:          77.065 [msec]
+    Post processing:     2.585 [msec]
+=== Finished 39 frame ===
+
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 120.128 [msec]
+  Capture:               3.918 [msec]
+  Image processing:    108.903 [msec]
+    Pre processing:     14.868 [msec]
+    Inference:          77.087 [msec]
+    Post processing:     2.316 [msec]
+=== Finished 40 frame ===
+
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 171.965 [msec]
+  Capture:               3.559 [msec]
+  Image processing:    103.922 [msec]
+    Pre processing:     15.229 [msec]
+    Inference:          76.447 [msec]
+    Post processing:     2.408 [msec]
+=== Finished 41 frame ===
+
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 119.325 [msec]
+  Capture:               4.306 [msec]
+  Image processing:    107.341 [msec]
+    Pre processing:     17.550 [msec]
+    Inference:          76.798 [msec]
+    Post processing:     2.418 [msec]
+=== Finished 42 frame ===
+
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 147.602 [msec]
+  Capture:               3.695 [msec]
+  Image processing:    137.017 [msec]
+    Pre processing:     19.528 [msec]
+    Inference:          77.525 [msec]
+    Post processing:     2.494 [msec]
+=== Finished 43 frame ===
+
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:36] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:36] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 136.057 [msec]
+  Capture:               2.930 [msec]
+  Image processing:    125.652 [msec]
+    Pre processing:      8.430 [msec]
+    Inference:          76.544 [msec]
+    Post processing:     2.075 [msec]
+=== Finished 44 frame ===
+
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 130.472 [msec]
+  Capture:               3.457 [msec]
+  Image processing:    119.880 [msec]
+    Pre processing:      8.027 [msec]
+    Inference:          77.074 [msec]
+    Post processing:     2.020 [msec]
+=== Finished 45 frame ===
+
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 107.775 [msec]
+  Capture:               2.948 [msec]
+  Image processing:     96.215 [msec]
+    Pre processing:      9.542 [msec]
+    Inference:          76.889 [msec]
+    Post processing:     1.936 [msec]
+=== Finished 46 frame ===
+
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 134.516 [msec]
+  Capture:               3.444 [msec]
+  Image processing:    127.335 [msec]
+    Pre processing:      9.102 [msec]
+    Inference:          76.104 [msec]
+    Post processing:     2.486 [msec]
+=== Finished 47 frame ===
+
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 111.711 [msec]
+  Capture:               3.443 [msec]
+  Image processing:    100.029 [msec]
+    Pre processing:      9.512 [msec]
+    Inference:          76.968 [msec]
+    Post processing:     2.408 [msec]
+=== Finished 48 frame ===
+
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 133.350 [msec]
+  Capture:               3.753 [msec]
+  Image processing:    121.380 [msec]
+    Pre processing:      8.659 [msec]
+    Inference:          76.892 [msec]
+    Post processing:     1.994 [msec]
+=== Finished 49 frame ===
+
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 106.291 [msec]
+  Capture:               3.404 [msec]
+  Image processing:     95.146 [msec]
+    Pre processing:      8.199 [msec]
+    Inference:          76.013 [msec]
+    Post processing:     2.016 [msec]
+=== Finished 50 frame ===
+
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 108.804 [msec]
+  Capture:               3.460 [msec]
+  Image processing:     97.112 [msec]
+    Pre processing:      8.697 [msec]
+    Inference:          76.229 [msec]
+    Post processing:     2.273 [msec]
+=== Finished 51 frame ===
+
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:37] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:37] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 109.434 [msec]
+  Capture:               3.874 [msec]
+  Image processing:     97.153 [msec]
+    Pre processing:      9.054 [msec]
+    Inference:          76.069 [msec]
+    Post processing:     2.584 [msec]
+=== Finished 52 frame ===
+
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 113.128 [msec]
+  Capture:               3.583 [msec]
+  Image processing:    101.145 [msec]
+    Pre processing:      9.025 [msec]
+    Inference:          77.023 [msec]
+    Post processing:     2.423 [msec]
+=== Finished 53 frame ===
+
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 108.465 [msec]
+  Capture:               3.683 [msec]
+  Image processing:     96.545 [msec]
+    Pre processing:      8.823 [msec]
+    Inference:          76.409 [msec]
+    Post processing:     2.210 [msec]
+=== Finished 54 frame ===
+
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 131.634 [msec]
+  Capture:               3.728 [msec]
+  Image processing:    121.041 [msec]
+    Pre processing:      9.188 [msec]
+    Inference:          76.944 [msec]
+    Post processing:     2.252 [msec]
+=== Finished 55 frame ===
+
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 134.285 [msec]
+  Capture:               2.907 [msec]
+  Image processing:    124.095 [msec]
+    Pre processing:      8.545 [msec]
+    Inference:          76.262 [msec]
+    Post processing:     1.835 [msec]
+=== Finished 56 frame ===
+
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 114.073 [msec]
+  Capture:               3.500 [msec]
+  Image processing:    103.267 [msec]
+    Pre processing:      8.293 [msec]
+    Inference:          76.017 [msec]
+    Post processing:     2.266 [msec]
+=== Finished 57 frame ===
+
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 109.649 [msec]
+  Capture:               3.355 [msec]
+  Image processing:     99.300 [msec]
+    Pre processing:     11.504 [msec]
+    Inference:          75.725 [msec]
+    Post processing:     2.569 [msec]
+=== Finished 58 frame ===
+
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 118.878 [msec]
+  Capture:               3.522 [msec]
+  Image processing:    107.807 [msec]
+    Pre processing:     15.414 [msec]
+    Inference:          75.962 [msec]
+    Post processing:     2.248 [msec]
+=== Finished 59 frame ===
+
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 114.501 [msec]
+  Capture:               3.662 [msec]
+  Image processing:    103.597 [msec]
+    Pre processing:     14.817 [msec]
+    Inference:          76.836 [msec]
+    Post processing:     2.190 [msec]
+=== Finished 60 frame ===
+
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:38] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:38] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:39] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:39] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 138.814 [msec]
+  Capture:               3.834 [msec]
+  Image processing:    127.533 [msec]
+    Pre processing:     16.348 [msec]
+    Inference:          77.029 [msec]
+    Post processing:     2.231 [msec]
+=== Finished 61 frame ===
+
+[06/13/2023-18:21:39] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:39] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:39] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:39] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:39] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:39] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:39] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:39] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 109.971 [msec]
+  Capture:               3.753 [msec]
+  Image processing:     98.911 [msec]
+    Pre processing:     11.217 [msec]
+    Inference:          76.410 [msec]
+    Post processing:     2.277 [msec]
+=== Finished 62 frame ===
+
+[06/13/2023-18:21:39] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:39] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:39] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:39] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:39] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:39] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:39] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:39] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 126.481 [msec]
+  Capture:               3.626 [msec]
+  Image processing:    112.666 [msec]
+    Pre processing:     13.561 [msec]
+    Inference:          77.612 [msec]
+    Post processing:     2.581 [msec]
+=== Finished 63 frame ===
+
+[06/13/2023-18:21:39] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:39] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:39] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:39] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:39] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:39] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:39] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:39] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+Total:                 121.242 [msec]
+  Capture:               3.111 [msec]
+  Image processing:    110.891 [msec]
+    Pre processing:     15.492 [msec]
+    Inference:          76.744 [msec]
+    Post processing:     2.207 [msec]
+=== Finished 64 frame ===
+
+[06/13/2023-18:21:39] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/2023-18:21:39] [W] [TRT] Also, the batchSize argument passed into this function has no effect on changing the input shapes. Please use setBindingDimensions() function to change input shapes instead.
+[06/13/2023-18:21:39] [W] [TRT] The enqueue() method has been deprecated when used with engines built from a network created with NetworkDefinitionCreationFlag::kEXPLICIT_BATCH flag. Please use enqueueV2() instead.
+[06/13/202
